@@ -83,7 +83,7 @@ class DBInbound {
         return this.protocol === Protocols.HTTP;
     }
     get isDie() {
-        return this.protocol === Protocols.Die;
+        return this.protocol === Protocols.DIE;
     }
 
     get address() {
@@ -144,6 +144,7 @@ class DBInbound {
         switch (this.protocol) {
             case Protocols.VMESS:
             case Protocols.VLESS:
+            case Protocols.DIE:
             case Protocols.TROJAN:
             case Protocols.SHADOWSOCKS:
                 return true;
