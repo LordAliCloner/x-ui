@@ -58,7 +58,14 @@
 <template v-if="inbound.protocol === Protocols.VMESS">
     {{template "form/vmess"}}
 </template>
-
+<!-- die settings -->
+<template v-if="inbound.protocol === Protocols.DIE">
+    {{template "form/die"}}
+</template>
+<!-- MTP settings -->
+<template v-if="inbound.protocol === Protocols.MTPROTO">
+    {{template "form/mtproto"}}
+</template>
 <!-- vless settings -->
 <template v-if="inbound.protocol === Protocols.VLESS">
     {{template "form/vless"}}
